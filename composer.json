@@ -1,9 +1,9 @@
 {
-    "name": "ams/sms-controller",
+    "name": "aekh/sms-controller",
     "type": "library",
     "description": "A PHP adaptor for aekh.ir sms controller",
     "keywords": ["ams", "sms", "sms-controller"],
-    "homepage": "https://github.com/roozbeh360/ams-sms-controller",
+    "homepage": "https://github.com/roozbeh360/aekh-sms-controller",
     "license": "MIT",
     "authors": [
         {
