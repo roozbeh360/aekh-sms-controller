@@ -1,4 +1,4 @@
-# ams-sms-controller
+# ams controller
 aekh.ir ams sms controllers adaptor .
 
 
