@@ -1,5 +1,5 @@
 # ams-sms-controller
-aekh.ir ams sms controllers adaptor
+aekh.ir ams sms controllers adaptor .
 
 
 #### Install
