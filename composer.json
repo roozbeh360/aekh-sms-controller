@@ -17,6 +17,5 @@
         "psr-4": {
             "AmsController\\": "src/"
         }
-    },
-    "minimum-stability" : "stable"
+    }
 }
