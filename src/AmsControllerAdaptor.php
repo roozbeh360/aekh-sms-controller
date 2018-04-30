@@ -10,10 +10,6 @@ class AmsControllerAdaptor
 
     public function __construct($smsService,$smsControllerNumber)
     {
-        if (!extension_loaded('curl')) {
-            die('cURL library is not loaded');
-            exit;
-        }
         if (!$smsService) {
             die('sms service is empty');
             exit;
@@ -84,7 +80,7 @@ class AmsControllerAdaptor
     
     private function execute($command)
     {
-        return $this->smsService->send($this->smsControllerNumber, $command);
+        return ['command'=>$command,'result'=>$this->smsService->send($this->smsControllerNumber, $command)];
     }
 
     
