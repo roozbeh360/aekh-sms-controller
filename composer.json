@@ -1,7 +1,4 @@
 {
-	"repository":{
-		"url":"https://packagist.org/packages/aekh/sms-controller"
-		},
     "name": "aekh/sms-controller",
     "type": "library",
     "description": "A PHP adaptor for aekh.ir sms controller",
@@ -20,5 +17,6 @@
         "psr-4": {
             "AmsController\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
