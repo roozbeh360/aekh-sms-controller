@@ -1,0 +1,22 @@
+{
+    "name": "ams/sms-controller",
+    "type": "library",
+    "description": "A PHP adaptor for aekh.ir sms controller",
+    "keywords": ["ams", "sms", "sms-controller"],
+    "homepage": "https://github.com/roozbeh360/ams-sms-controller",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roozbeh Baabakaan"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AmsController\\": "src/"
+        }
+    },
+    "minimum-stability" : "stable"
+}
