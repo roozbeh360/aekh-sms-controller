@@ -54,6 +54,18 @@ class AmsControllerAdaptor
         return $this->execute($command);
     }
     
+    public function turnOnAllarm()
+    {
+        $command = "RM.ON";
+        return $this->execute($command);
+    }
+    
+    public function turnOffAllarm()
+    {
+        $command = "RM.OFF";
+        return $this->execute($command);
+    }
+    
     public function turnOnDevice()
     {
         $command = "@DZ1";
@@ -75,6 +87,12 @@ class AmsControllerAdaptor
     public function getTemperature()
     {
         $command = "S.REP";
+        return $this->execute($command);
+    }
+    
+    public function turnOnOutput($number,$duration)
+    {
+        $command = "TMR.$number($duration)";
         return $this->execute($command);
     }
     
