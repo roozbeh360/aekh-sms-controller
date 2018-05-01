@@ -90,7 +90,7 @@ class AmsControllerAdaptor
         return $this->execute($command);
     }
     
-    public function turnOnOutput($number,$duration)
+    public function outputSwitchOnByDuration($number,$duration)
     {
         $command = "TMR.$number($duration)";
         return $this->execute($command);
