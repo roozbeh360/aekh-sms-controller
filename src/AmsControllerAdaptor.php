@@ -54,13 +54,13 @@ class AmsControllerAdaptor
         return $this->execute($command);
     }
     
-    public function turnOnAllarm()
+    public function turnOnAlarm()
     {
         $command = "RM.ON";
         return $this->execute($command);
     }
     
-    public function turnOffAllarm()
+    public function turnOffAlarm()
     {
         $command = "RM.OFF";
         return $this->execute($command);
