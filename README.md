@@ -13,3 +13,8 @@ aekh.ir ams sms controllers adaptor .
     $smsService = new SmsService(); // sms service class must implement send($receptor, $message) method
     $AmsControllerAdaptor = new AmsControllerAdaptor(smsService, number);
     $result = $AmsControllerAdaptor->turnOffAlarm() ;
+
+#### callback sms response
+    
+    $message = $_POST['messgae']; // message callback from sms controller
+    $result = AmsControllerAdaptor::mapResponse($message);
