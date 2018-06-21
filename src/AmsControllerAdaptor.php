@@ -152,7 +152,7 @@ class AmsControllerAdaptor
         }
         
         if (strpos($response, 'Config') > -1) {
-            $c_r = trim(str_replace(['Config Report... C Temp(', ') C Siren(', ') C Dial(', ') C Secure(', ') C Relay(', ')'], ' ', $response));
+            $c_r = trim(preg_replace('/\s+/', ' ', str_replace(['Config Report... C Temp(', ') C Siren(', ') C Dial(', ') C Secure(', ') C Relay(', ')'], ' ', $response)));
             $c = explode(' ', $c_r);           
             return ['type' => 'status', 'params' =>
                 [
@@ -168,13 +168,13 @@ class AmsControllerAdaptor
         }
 
         if (strpos($response, 'Report') > -1) {
-            $c_r = str_replace(['Report... OUT:', 'IN:', 'temp:', 'DZ:', 'RM:'], '', $response);
-            $c = explode(' ', $c_r);
+            $c_r = trim(preg_replace('/\s+/', ' ', str_replace(['Report...', 'OUT:', 'IN:', 'temp:', 'DZ:', 'RM:'], ' ', $response)));            
+            $c = explode(' ', $c_r) ;        
             return ['type' => 'status', 'params' =>
                 [
-                    'out1' => explode('-', $c[0])[0],
-                    'out2' => explode('-', $c[0])[1],
-                    'out3' => explode('-', $c[0])[2],
+                    'out1' => (boolean)explode('-', $c[0])[0],
+                    'out2' => (boolean)explode('-', $c[0])[1],
+                    'out3' => (boolean)explode('-', $c[0])[2],
                     'in1' => !((boolean) explode('-', $c[1])[0]),
                     'in2' => !((boolean) explode('-', $c[1])[1]),
                     'in3' => !((boolean) explode('-', $c[1])[2]),
