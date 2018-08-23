@@ -20,13 +20,13 @@ class AmsControllerAdaptor
 
     public function outputSwitchOn($switchNumber)
     {
-        $command = "ON:$switchNumber";
+        $command = "OFF:$switchNumber";
         return $this->execute($command);
     }
 
     public function outputSwitchOff($switchNumber)
     {
-        $command = "OFF:$switchNumber";
+        $command = "ON:$switchNumber";
         return $this->execute($command);
     }
 
